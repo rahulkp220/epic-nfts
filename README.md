@@ -1,15 +1,25 @@
-# Basic Sample Hardhat Project
+# Epic NFTs
+A sample project to create NFTs over Ethereum rinkeyby test network.
+It uses the following components,
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+- [hardhat](https://hardhat.org/)
+- [alchemi](https://dashboard.alchemyapi.io/) 
+- [etherscan](https://etherscan.io/)
+- [opensea](https://opensea.io/)
 
-Try running some of the following tasks:
+### Testing it out
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+- Running it on hardhat local blockchain
+```
+npx hardhat run scripts/run.js --verbose
+```
+
+- Deploy it on ethereum rinkeby test network
+```
+npx hardhat run scripts/deploy.js --network rinkeby --verbose --show-stack-traces
+```
+
+- Verify contract on etherscan
+```
+npx hardhat verify --contract contracts/MyEpicNFT.sol --network rinkeby
 ```
